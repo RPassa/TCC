@@ -263,7 +263,6 @@ public class ClienteForm extends javax.swing.JInternalFrame{
                 formKeyTyped(evt);
             }
         });
-        getContentPane().setLayout(null);
 
         pnlPrincipal.setLayout(null);
 
@@ -606,9 +605,6 @@ public class ClienteForm extends javax.swing.JInternalFrame{
         pnlPrincipal.add(jTextField1);
         jTextField1.setBounds(380, 159, 157, 28);
 
-        getContentPane().add(pnlPrincipal);
-        pnlPrincipal.setBounds(0, 0, 605, 641);
-
         frameEnderecos.setTitle("Cadastros de Endereços");
         frameEnderecos.setVisible(false);
 
@@ -895,8 +891,16 @@ public class ClienteForm extends javax.swing.JInternalFrame{
                 .addGap(17, 17, 17))
         );
 
-        getContentPane().add(frameEnderecos);
-        frameEnderecos.setBounds(604, 0, 0, 0);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 604, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 601, Short.MAX_VALUE)
+        );
 
         getAccessibleContext().setAccessibleName("frmClientes");
 
